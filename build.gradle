@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'it.unimi.di.prog2'
+version '1.0-SNAPSHOT'
+
+application.mainClassName = 'it.unimi.di.prog2.esame.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+
+    implementation 'org.jetbrains:annotations:22.0.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+run {
+    enableAssertions = true
+}
